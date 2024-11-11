@@ -1,0 +1,27 @@
+<h6>Create People</h6>
+
+<mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="createPeopleModel.name">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>BirthYear</mat-label>
+    <input matInput [(ngModel)]="createPeopleModel.birthYear">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Gender</mat-label>
+    <input matInput [(ngModel)]="createPeopleModel.gender">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Homeworld</mat-label>
+    <mat-select [(ngModel)]="createPeopleModel.homeworldId">
+        @for (planet of planets; track planet) {
+            <mat-option [value]="planet.id">{{planet.name}}</mat-option>
+            }
+    </mat-select>
+</mat-form-field>
+
+<button mat-flat-button (click)="createPeople()">Create</button>

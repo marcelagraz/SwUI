@@ -1,11 +1,11 @@
 <div class="flex-container">
-  <h6>Planets</h6>
-  <button mat-fab (click)="goToCreatePlanet()" class="create-button">
+  <h6>Peoples</h6>
+  <button mat-fab (click)="goToCreatePeople()" class="create-button">
     <mat-icon>add</mat-icon>
   </button>
 </div>
 
-<table mat-table [dataSource]="planets" class="mat-elevation-z8">
+<table mat-table [dataSource]="peoples" class="mat-elevation-z8">
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
@@ -13,16 +13,16 @@
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
   
-    <!-- Gravity Column -->
-    <ng-container matColumnDef="gravity">
-      <th mat-header-cell *matHeaderCellDef> Gravity </th>
-      <td mat-cell *matCellDef="let element"> {{element.gravity}} </td>
+    <!-- BirthYear Column -->
+    <ng-container matColumnDef="birthYear">
+      <th mat-header-cell *matHeaderCellDef> BirthYear </th>
+      <td mat-cell *matCellDef="let element"> {{element.birthYear}} </td>
     </ng-container>
   
-    <!-- Climate Column -->
-    <ng-container matColumnDef="climate">
-      <th mat-header-cell *matHeaderCellDef> Climate </th>
-      <td mat-cell *matCellDef="let element"> {{element.climate}} </td>
+    <!-- Gender Column -->
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef> Gender </th>
+      <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
     </ng-container>
 
     <!-- Created Column -->

@@ -1,7 +1,7 @@
 import { Planet } from './planet';
 
 export interface BaseResponse {
-    data: Planet[];
+    data: any[];
     status: number;
     validationErrors: []
 }

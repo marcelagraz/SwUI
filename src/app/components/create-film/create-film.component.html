@@ -1,0 +1,26 @@
+<h6>Create Film</h6>
+
+<mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="createFilmModel.title">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Episode</mat-label>
+    <input matInput [(ngModel)]="createFilmModel.episode">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Director</mat-label>
+    <input matInput [(ngModel)]="createFilmModel.director">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Release Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="releaseDate">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<button mat-flat-button (click)="createFilm()">Create</button>
