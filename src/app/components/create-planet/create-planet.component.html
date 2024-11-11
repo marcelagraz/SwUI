@@ -1,0 +1,18 @@
+<h6>Create Planet</h6>
+
+<mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="createPlanetModel.name">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Gravity</mat-label>
+    <input matInput [(ngModel)]="createPlanetModel.gravity">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Climate</mat-label>
+    <input matInput [(ngModel)]="createPlanetModel.climate">
+</mat-form-field>
+
+<button mat-flat-button (click)="createPlanet()">Create</button>
